@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoCheck.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bee4da7b81e1311f8a308776c8f9cd607d43ff21")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1452811058171e46bd9ed7d97e77716740184de")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoCheck.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoCheck.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

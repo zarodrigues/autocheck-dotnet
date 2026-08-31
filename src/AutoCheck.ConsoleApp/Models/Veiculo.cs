@@ -30,9 +30,9 @@ public class Veiculo
     {
         List<string> checklist = new List<string>();
 
-        checklist.Add("Nível de Óleo do Motor");
-        checklist.Add("Bateria e Sistema Elétrico");
-        checklist.Add("Documentação Regularizada");
+    checklist.Add("Nível de Óleo do Motor");
+    checklist.Add("Bateria e Sistema Elétrico");
+    checklist.Add("Documentação Regularizada");
 
         return checklist;
     }
