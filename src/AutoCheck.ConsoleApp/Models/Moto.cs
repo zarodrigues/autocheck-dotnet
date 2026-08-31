@@ -2,28 +2,28 @@ using System.Collections.Generic;
 
 namespace AutoCheck.ConsoleApp.Models;
 
-public class Carro : Veiculo
+public class Moto : Veiculo
 {
-    public int QuantidadePortas { get; set; }
+    public int Cilindradas { get; set; }
 
-    public Carro(
+    public Moto(
         string marca,
         string modelo,
         int ano,
         int quilometragem,
-        int quantidadePortas)
+        int cilindradas)
         : base(marca, modelo, ano, quilometragem)
     {
-        this.QuantidadePortas = quantidadePortas;
+        this.Cilindradas = cilindradas;
     }
 
     public override List<string> ObterChecklistObrigatorio()
     {
         List<string> checklist = base.ObterChecklistObrigatorio();
 
-        checklist.Add("Estepe e Macaco");
-        checklist.Add("Triângulo de Sinalização");
-        checklist.Add("Ar Condicionado Funcional");
+        checklist.Add("Kit Transmissão/Corrente");
+        checklist.Add("Manetes de Freio/Embreagem");
+        checklist.Add("Pezinho Lateral");
 
         return checklist;
     }

@@ -1,18 +1,39 @@
+using System.Collections.Generic;
+
 namespace AutoCheck.ConsoleApp.Models;
 
-public class ItemVistoria
+public class Veiculo
 {
-    public string Nome { get; set; }
-    public string Status { get; set; }
+    public string Marca { get; set; }
+    public string Modelo { get; set; }
+    public int Ano { get; set; }
+    public int Quilometragem { get; set; }
 
-    public ItemVistoria(string nome, string status)
+    public List<ItemVistoria> VistoriaRealizada { get; set; }
+
+    public Veiculo(string marca, string modelo, int ano, int quilometragem)
     {
-        if (status != "Bom" && status != "Regular" && status != "Ruim")
-        {
-            throw new ArgumentException("Status deve ser Bom, Regular ou Ruim.");
-        }
+        this.Marca = marca;
+        this.Modelo = modelo;
+        this.Ano = ano;
+        this.Quilometragem = quilometragem;
+        this.VistoriaRealizada = new List<ItemVistoria>();
+    }
 
-        this.Nome = nome;
-        this.Status = status;
+    public void AdicionarItemVistoriado(string nome, string status)
+    {
+        ItemVistoria item = new ItemVistoria(nome, status);
+        this.VistoriaRealizada.Add(item);
+    }
+
+    public virtual List<string> ObterChecklistObrigatorio()
+    {
+        List<string> checklist = new List<string>();
+
+        checklist.Add("Nível de Óleo do Motor");
+        checklist.Add("Bateria e Sistema Elétrico");
+        checklist.Add("Documentação Regularizada");
+
+        return checklist;
     }
 }

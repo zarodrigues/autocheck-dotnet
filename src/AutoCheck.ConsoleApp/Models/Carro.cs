@@ -2,37 +2,28 @@ using System.Collections.Generic;
 
 namespace AutoCheck.ConsoleApp.Models;
 
-public class Veiculo
+public class Carro : Veiculo
 {
-    public string Marca { get; set; }
-    public string Modelo { get; set; }
-    public int Ano { get; set; }
-    public int Quilometragem { get; set; }
+    public int QuantidadePortas { get; set; }
 
-    public List<ItemVistoria> VistoriaRealizada { get; set; }
-
-    public Veiculo(string marca, string modelo, int ano, int quilometragem)
+    public Carro(
+        string marca,
+        string modelo,
+        int ano,
+        int quilometragem,
+        int quantidadePortas)
+        : base(marca, modelo, ano, quilometragem)
     {
-        this.Marca = marca;
-        this.Modelo = modelo;
-        this.Ano = ano;
-        this.Quilometragem = quilometragem;
-        this.VistoriaRealizada = new List<ItemVistoria>();
+        this.QuantidadePortas = quantidadePortas;
     }
 
-    public void AdicionarItemVistoriado(string nome, string status)
+    public override List<string> ObterChecklistObrigatorio()
     {
-        ItemVistoria item = new ItemVistoria(nome, status);
-        this.VistoriaRealizada.Add(item);
-    }
+        List<string> checklist = base.ObterChecklistObrigatorio();
 
-    public virtual List<string> ObterChecklistObrigatorio()
-    {
-        List<string> checklist = new List<string>();
-
-        checklist.Add("Nível de Óleo do Motor");
-        checklist.Add("Bateria e Sistema Elétrico");
-        checklist.Add("Documentação Regularizada");
+        checklist.Add("Estepe e Macaco");
+        checklist.Add("Triângulo de Sinalização");
+        checklist.Add("Ar Condicionado Funcional");
 
         return checklist;
     }

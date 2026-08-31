@@ -2,28 +2,31 @@ using System.Collections.Generic;
 
 namespace AutoCheck.ConsoleApp.Models;
 
-public class Moto : Veiculo
+public class Caminhao : Veiculo
 {
-    public int Cilindradas { get; set; }
+    public int QuantidadeEixos { get; set; }
+    public double CapacidadeCargaToneladas { get; set; }
 
-    public Moto(
+    public Caminhao(
         string marca,
         string modelo,
         int ano,
         int quilometragem,
-        int cilindradas)
+        int quantidadeEixos,
+        double capacidadeCargaToneladas)
         : base(marca, modelo, ano, quilometragem)
     {
-        this.Cilindradas = cilindradas;
+        this.QuantidadeEixos = quantidadeEixos;
+        this.CapacidadeCargaToneladas = capacidadeCargaToneladas;
     }
 
     public override List<string> ObterChecklistObrigatorio()
     {
         List<string> checklist = base.ObterChecklistObrigatorio();
 
-        checklist.Add("Kit Transmissão/Corrente");
-        checklist.Add("Manetes de Freio/Embreagem");
-        checklist.Add("Pezinho Lateral");
+        checklist.Add("Tacógrafo");
+        checklist.Add("Sistema de Freios a Ar");
+        checklist.Add("Trava e Lona da Caçamba");
 
         return checklist;
     }
