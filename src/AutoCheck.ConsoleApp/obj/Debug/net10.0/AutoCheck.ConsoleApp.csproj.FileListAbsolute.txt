@@ -12,3 +12,4 @@ C:\Users\isaia\autocheck-dotnet\src\AutoCheck.ConsoleApp\obj\Debug\net10.0\refin
 C:\Users\isaia\autocheck-dotnet\src\AutoCheck.ConsoleApp\obj\Debug\net10.0\AutoCheck.ConsoleApp.pdb
 C:\Users\isaia\autocheck-dotnet\src\AutoCheck.ConsoleApp\obj\Debug\net10.0\AutoCheck.ConsoleApp.genruntimeconfig.cache
 C:\Users\isaia\autocheck-dotnet\src\AutoCheck.ConsoleApp\obj\Debug\net10.0\ref\AutoCheck.ConsoleApp.dll
+C:\Users\isaia\autocheck-dotnet\src\AutoCheck.ConsoleApp\obj\Debug\net10.0\AutoCheck.ConsoleApp.sourcelink.json
